@@ -39,17 +39,17 @@ while opc > 4 or opc < 1:
     sleep(1)
 
 if opc == 1:
-    print('''Para pagamentos à vista em dinheiro você recebe 10% de desconto! 
-Portanto, a sua compra de \033[:34mR${:.2f}\033[m vai ficar por \033[:32mR${:.2f}\033[m'''.format(valor, valor-des10))
+    print(f'''Para pagamentos à vista em dinheiro você recebe 10% de desconto! 
+Portanto, a sua compra de \033[:34mR${valor:.2f}\033[m vai ficar por \033[:32mR${valor-des10:.2f}\033[m''')
 
 elif opc == 2:
-    print('''Para pagamentos à vista com cartão você recebe 5% de desconto! 
-Portanto, a sua compra de \033[:34mR${:.2f}\033[m vai ficar por \033[:32mR${:.2f}\033[m'''.format(valor, valor-des5))
+    print(f'''Para pagamentos à vista com cartão você recebe 5% de desconto! 
+Portanto, a sua compra de \033[:34mR${valor:.2f}\033[m vai ficar por \033[:32mR${valor-des5:.2f}\033[m''')
 
 elif opc == 3:
     print('Para pagamentos em até 2x no cartão suas compras não recebem juros. Aproveite!')
 
 elif opc == 4:
     parc = int(input('Quantas parcelas? '))
-    print('Sua compra será parcelada em {}x de R${:.2f} COM JUROS.'.format(parc, (valor+juros)/parc))
+    print(f'Sua compra será parcelada em {parc}x de R${(valor+juros)/parc:.2f} COM JUROS.')
     print(f'Sua compra de \033[:34mR${valor:.2f}\033[m vai custar \033[:33mR${valor+juros:.2f}\033[m no total.')
