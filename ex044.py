@@ -53,3 +53,4 @@ elif opc == 4:
     parc = int(input('Quantas parcelas? '))
     print(f'Sua compra será parcelada em {parc}x de R${(valor+juros)/parc:.2f} COM JUROS.')
     print(f'Sua compra de \033[:34mR${valor:.2f}\033[m vai custar \033[:33mR${valor+juros:.2f}\033[m no total.')
+    
